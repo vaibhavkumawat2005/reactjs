@@ -19,7 +19,7 @@ function Test1() {
 
   return (
     <>
-    <h1>Hello From test1</h1>
+    <h1 className='hey'>Hello from Test1</h1>
       
     </>
   )

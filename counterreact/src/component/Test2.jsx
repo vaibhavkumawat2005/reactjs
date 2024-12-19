@@ -3,7 +3,7 @@ import React from 'react'
 function Test2() {
   return (
     <>
-      <h1>Hello From Test2</h1>
+      <h1 className='hey'>Hello from Test2</h1>
     </>
   )
 }

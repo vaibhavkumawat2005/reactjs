@@ -13,23 +13,27 @@ function App() {
     };
   }, [counter]);
 
-  const handelerIncrement = () => {
-    setcounter(counter + 1);
+  const handledecrement = () => {
+    if (counter > 0) {
+      setcounter(counter - 1);
+    }
   };
-  const handelerdecrement = () => {
-    setcounter(counter - 1);
-  };
+  
+    
 
   console.log("App Component Rendered");
 
   return (
     <>
-      <h2>Heyyy bhai from here</h2>
-      <h4>Count {counter}</h4>
-      <button onClick={handelerIncrement}>Increment</button>
-      <button onClick={handelerdecrement}>Decrement</button>
-      {isActive ? <Test1 /> : <Test2 />}
-      <button onClick={() => setActive(!isActive)}>Toggle Component</button>
+      <div className="container">
+        <h2>Heyyy bhai from here</h2>
+        <h4>Count {counter}</h4>
+        <button onClick={()=>setcounter(counter+1)}>Increment</button>
+        <button onClick={handledecrement}>Decrement</button>
+        {isActive ? <Test1 /> : <Test2 />}
+        <button onClick={() => setActive(!isActive)}>Toggle Component</button>
+      </div>
+
     </>
   );
 }
